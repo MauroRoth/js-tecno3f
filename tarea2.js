@@ -1,4 +1,7 @@
 // Roth, Mauro Gonzalo - DNI 30430511
+
+/// requiere prompt-sync instalado
+
 function clasificacionNumeroEntero(numeroEntero) {
   if (numeroEntero > 0) { return "Positivo" };
   if (numeroEntero < 0) { return "Negativo" };
@@ -57,13 +60,38 @@ function numeroMayorEntreTres(numero1, numero2, numero3) {
   else { return mayorParcial };
 }
 // Test
-//console.log(clasificacionNumeroEntero(0));
-//console.log(esTriangulo(7,2,3));
-//console.log(determinarTipoTriangulo(5,5,15));
-//console.log(clasificarPorEdades(85));
-//console.log(parOImpar(7))
-//const notas = [120,101,100,95,90,89,84,80,79,76,70,69,67,60,59,28];
-//notas.forEach(nota => console.log(nota, calculoDeNotas(nota)));
-//console.log(numeroMayorEntreDos(5,5)[2]);
-console.log(numeroMayorEntreTres(7, 8, 7));
+const prompt = require("prompt-sync")();
+
+console.log("\n1. CLASIFICACIÓN DE NÚMERO ENTERO");
+let numeroEnteroIngresado = Number(prompt("Ingrese un número entero: "));
+console.log(clasificacionNumeroEntero(numeroEnteroIngresado));
+
+console.log("\n2. TIPO DE TRIÁNGULO");
+let lado1Ingresado = Number(prompt("Ingrese lado 1: "));
+let lado2Ingresado = Number(prompt("Ingrese lado 2: "));
+let lado3Ingresado = Number(prompt("Ingrese lado 3: "));
+console.log(determinarTipoTriangulo(lado1Ingresado,lado2Ingresado,lado3Ingresado));
+
+console.log("\n3. CLASIFICACIÓN DE EDAD");
+let edadIngresada = Number(prompt("Ingrese edad: "));
+console.log(clasificarPorEdades(edadIngresada));
+
+console.log("\n4. PAR O IMPAR");
+let numeroIntIngresado = Number(prompt("Ingrese un número entero: "));
+console.log(parOImpar(numeroIntIngresado));
+
+console.log("\n5. CÁLCULO DE NOTAS");
+let calificacionIngresada = Number(prompt("Ingrese su calificación: "));
+console.log("Equivale a ", calculoDeNotas(calificacionIngresada));
+
+console.log("\n6.1. NÚMERO MAYOR ENTRE DOS");
+let num1Ingresado = Number(prompt("Ingrese número 1: "));
+let num2Ingresado = Number(prompt("Ingrese número 2: "));
+console.log(numeroMayorEntreDos(num1Ingresado,num2Ingresado));
+
+console.log("\n6.2. NÚMERO MAYOR ENTRE TRES");
+let num1Ingr = Number(prompt("Ingrese número 1: "));
+let num2Ingr = Number(prompt("Ingrese número 2: "));
+let num3Ingr = Number(prompt("Ingrese número 3: "));
+console.log(numeroMayorEntreTres(num1Ingr,num2Ingr, num3Ingr));
 
