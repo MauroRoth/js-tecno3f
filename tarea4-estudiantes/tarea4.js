@@ -1,5 +1,6 @@
 // Roth, Mauro Gonzalo - DNI 30430511
 
+// ----------------------------------DATA-----------------------------------------
 const estudiantes = [
   {
     id: 1,
@@ -22,7 +23,7 @@ const estudiantes = [
     id: 3,
     nombre: "Mia",
     cursos: [
-      { titulo: "Python Data", categoria: "Datos", notas: [-4, 5, 5], aprobado: false },
+      { titulo: "Python Data", categoria: "Datos", notas: [4, 5, 5], aprobado: false },
       { titulo: "SQL Intro", categoria: "Datos", notas: [6, 6, 7], aprobado: true }
     ]
   },
@@ -48,9 +49,11 @@ const promedioPorCruso = estudiantes.map(e=>({
   }))
 }));
 
-// promedioPorCruso.forEach(element => {
-//   console.log(element)
-// });
+// VISUALIZACIÓN ...
+console.log('\nPUNTO 1.A: PROMEDIO POR CURSO POR ESTUDIANTE\n');
+promedioPorCruso.forEach(element => {
+  console.log(element)
+});
 
 // Calcular el promedio general del estudiante (promedio de todos sus cursos combinados).
 const promedioGeneral = estudiantes.map(e=>{
@@ -61,9 +64,12 @@ const promedioGeneral = estudiantes.map(e=>{
     promedioGeneral: Number(promedio).toFixed(2),
   }
 })
-// promedioGeneral.forEach(element => {
-//   console.log(element)
-// });
+
+// VISUALIZACIÓN ...
+console.log('\nPUNTO 1.B: PROMEDIO GENERAL POR ESTUDIANTE\n');
+promedioGeneral.forEach(element => {
+  console.log(element)
+});
 
 
 
@@ -74,8 +80,10 @@ const promedioGeneral = estudiantes.map(e=>{
 const cantPromGralMayorA8 = promedioGeneral.filter(e=> e.promedioGeneral>8).length;
 const cantPromGralMenorA6 = promedioGeneral.filter(e=> e.promedioGeneral<6).length;
 
-//console.log('Cantidad Estudiantes con Prom Gral > 8: ', cantPromGralMayorA8);
-//console.log('Cantidad Estudiantes con Pom Gral < 6: ', cantPromGralMenorA6);
+// VISUALIZACIÓN ...
+console.log('\nPUNTO 2: CANTIDAD DE ESTUDIANTES CON PROM GRAL...\n');
+console.log('Cantidad Estudiantes con Prom Gral > 8: ', cantPromGralMayorA8);
+console.log('Cantidad Estudiantes con Pom Gral < 6: ', cantPromGralMenorA6);
 
 
 
@@ -98,7 +106,9 @@ const aprobadosYNivelados = estudiantes.map(e=>{
 }).filter(e=>e.tieneCursoAprobado&&e.promedioGeneral>=6)
   .map(({id, nombre, promedioGeneral})=>({id, nombre, promedioGeneral}));
 
-// console.log(aprobadosYNivelados);
+// VISUALIZACIÓN ...
+console.log('\nPUNTO 3: UN CURSO APROB Y PROM GRAL > 6\n');
+console.log(aprobadosYNivelados);
 
 
 
@@ -117,11 +127,13 @@ const cursosCriticos = promedioPorCruso.flatMap(e=>{
     }
   });
   return cursos;
-}).filter(e=>e.promedioCurso>6);
+}).filter(e=>e.promedioCurso<6);
 
-// cursosCriticos.forEach(element => {
-//   console.log(element)
-// });
+// VISUALIZACIÓN ...
+console.log('\nPUNTO 4: CURSOS CRÍTICOS NO APROBADOS\n');
+cursosCriticos.forEach(element => {
+  console.log(element)
+});
 
 
 // ------------------------ 5. Top 3 estudiantes por promedio general ------------------------- 
@@ -131,7 +143,10 @@ const cursosCriticos = promedioPorCruso.flatMap(e=>{
 const mejoresTresPromedios = promedioGeneral
    .sort((a,b)=>b.promedioGeneral-a.promedioGeneral)
    .slice(0,3);
-//console.log(mejoresTresPromedios)
+
+// VISUALIZACIÓN ...
+console.log('\nPUNTO 5: ORDEN DESC, LOS 3 MEJORES\n');
+console.log(mejoresTresPromedios);
 
 // Extras (opcionales)
 
@@ -169,7 +184,9 @@ const promediosPorCategorias = Object.entries(sumasParciales)
     return {categoria,promedio}
   });
 
-//  console.log(promediosPorCategorias);
+// VISUALIZACIÓN ...
+console.log('\nPUNTO 6: PROMEDIOS POR CATEGORÍAS\n');
+console.log(promediosPorCategorias);
 
 
 // 7 .Validaciones
@@ -188,4 +205,7 @@ const validacionNotas = estudiantes.flatMap(e=>{
   }).filter(n=>n.sonValidas===false);
   return todasLasNotas;
 })
+
+// VISUALIZACIÓN ...
+console.log('\nPUNTO 7: VALIDACIONES NOTAS FUERA DE RANGO\n');
 console.log(validacionNotas)
