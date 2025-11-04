@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador Interactivo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="center-flex">
+    <main class="center-flex">
+        <!-- título -->
+        <h1>Contador Interactivo</h1>
+        <!-- pantalla -->
+        <div id="pantalla">0</div>
+        <!-- controles -->
+        <div id="controles" class="center-flex">
+            <div id="botonera" class="center-flex">
+                <button class="btn" id="descuentaUno">-1</button>
+                <button class="btn" id="aumentaUno">+1</button>
+                <button class="btn" id="reinicia">Reiniciar</button> 
+            </div>
+            <div id="establecerValor" class="center-flex">
+                <input id="valorIngresado" type="text" placeholder="Ingrese un valor">
+                <button class="btn" id="estableceValor" type="submit">Establecer Valor</button>
+            </div>
+        </div>  
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
