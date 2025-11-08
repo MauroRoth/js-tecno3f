@@ -41,3 +41,5 @@ reiniciaBoton.addEventListener("click", (e) => {
 establecerValorBoton.addEventListener("click", (e) => {
     modificaDisplay(e.target.textContent)
 })
+
+// Mauro Gonzalo Roth
