@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" class="bgc-gray-f1 flex column jfc-center ai-center">
+<head class="bgc-gray">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Biblia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+</head>
+<body class="flex column jfc-center ai-center w-60 mtop-20 mbottom-40 bgc-white border">
+    <header class="w-100 txta-center bgc-gray-f2 border-bottom h-150"> 
+        <!-- <nav>
+            <ul>
+                <menu>menu1</menu>
+                <menu>menu2</menu>
+                <menu>menu3</menu>
+                <menu>menu4</menu>
+                <menu>menu5</menu>
+            </ul>
+        </nav> -->
+        <h1 class="eb-garamond">The Bible</h1>
+    </header>
+    <main class="w-60 txta-center"> 
+        <section id="request"> 
+            <form action="">
+                <input type="text">
+            </form>
+        </section>
+        <hr>
+        <section id="response"> soy la sección response
+            <template id="cita-biblica"> 
+                <span>"</span>
+                <h4 data-id="referencia">Referencia</h4>
+                <p data-id="texto-cita">Texto Cita Bíblica</p> 
+                <span>"</span>  
+            </template>
+            <div id="contenedor-cita"></div> 
+        </section>
+        <section id="libros-biblia">
+            <div>Libro 1</div>
+            <div>Libro 2</div>
+            <div>Libro 3</div>
+            <div>Libro 4</div>
+            <div>Libro 5</div>
+            <div>Libro 6</div>
+            <div>Libro 7</div>
+            <div>Libro 8</div>
+            <div>Libro 9</div>
+            <div>Libro 10</div>
+        </section>
+    </main>
+    <footer class="w-100 txta-center bgc-gray-f2 color-white">
+        <p>by Mauro Gonzalo Roth</p>
+        <p>Con datos suministrados por https://bible-api.com/</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

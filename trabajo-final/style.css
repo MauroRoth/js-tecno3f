@@ -1,0 +1,53 @@
+:root {
+  /* Grises Oscuros para texto o fondos profundos */
+  --color-negro: #000000;
+  --color-gris-muy-oscuro: #111111;
+  --color-gris-oscuro: #333333;
+  --color-gris-carbon: #444444;
+
+  /* Grises Medios */
+  --color-gris-medio: #666666;
+  --color-gris-estandar: #808080;
+
+  /* Grises Claros para bordes o fondos sutiles */
+  --color-gris-claro: #AAAAAA;
+  --color-gris-muy-claro: #CCCCCC;
+  --color-gris-fondo-1: #CFCFCF;
+  --color-gris-fondo-2: #EEEEEE;
+  --color-blanco: #FFFFFF;
+}
+
+
+.eb-garamond {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 60px;
+}
+.w-60 {width: 60%;}
+.w-100 {width: 100%;}
+.h-150 {height: 150px;}
+.mtop-20 {margin-top: 20px;}
+.mbottom-40 {margin-bottom: 40px;}
+
+.flex {display: flex;}
+
+.column {flex-direction: column;}
+
+.jfc-center {justify-content: center;}
+
+.ai-center {align-items: center;}
+
+.txta-center {text-align: center;}
+
+.bgc-gray-f1 {background-color: var(--color-gris-fondo-2);}
+.bgc-gray-f2 {background-color: var(--color-gris-fondo-1);}
+.bgc-negro-f3 {background-color: var(--color-negro);}
+.bgc-white {background-color: white;}
+
+.color-white {color: white;}
+
+.border {border: solid 2px var(--color-gris-estandar);}
+.border-bottom {border-bottom: solid 2px var(--color-gris-estandar);}
+
