@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Plantilla TP FINAL JS</title>
+</head>
+<body>
+    <body>
+    <!-- HEADER -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">Plantilla TP final JS</div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#api">[Sección API]</a></li>
+                    <li><a href="#formulario">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SECCIÓN PRINCIPAL -->
+    <section id="inicio">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Bienvenido a [Tu Temática]</h1>
+                <p>Una descripción atractiva sobre tu temática que capte la atención del visitante.</p>
+                <a href="#api" class="btn">Explorar Más</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN API -->
+    <section id="api">
+        <div class="container api-container">
+            <h2>Datos de [Tu API]</h2>
+            <p>Información obtenida desde una API pública relacionada con tu temática.</p>
+            
+            <div class="api-content" id="apiContent">
+                <!-- Los datos de la API se cargarán aquí dinámicamente -->
+                <div class="api-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Ejemplo">
+                    <h3>Elemento de Ejemplo</h3>
+                    <p>Descripción del elemento obtenido desde la API.</p>
+                </div>
+            </div>
+            
+            <button id="cargarDatos" class="btn" style="margin-top: 30px;">Cargar Datos</button>
+        </div>
+    </section>
+
+    <!-- SECCIÓN FORMULARIO -->
+    <section id="formulario">
+        <div class="container">
+            <div class="form-container">
+                <h2>Formulario de Contacto</h2>
+                <p>Completa el formulario para ponerte en contacto con nosotros.</p>
+                
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre">
+                        <div class="error" id="errorNombre"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email">
+                        <div class="error" id="errorEmail"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="asunto">Asunto</label>
+                        <select id="asunto" name="asunto">
+                            <option value="">Selecciona un asunto</option>
+                            <option value="consulta">Consulta</option>
+                            <option value="sugerencia">Sugerencia</option>
+                            <option value="problema">Reportar problema</option>
+                        </select>
+                        <div class="error" id="errorAsunto"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+                        <div class="error" id="errorMensaje"></div>
+                    </div>
+                    
+                    <button type="submit" class="btn">Enviar Mensaje</button>
+                </form>
+                
+                <div class="success-message" id="successMessage">
+                    ¡Gracias por tu mensaje! Te contactaremos pronto.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 MiSitioWeb. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

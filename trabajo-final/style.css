@@ -17,7 +17,6 @@
   --color-blanco: #FFFFFF;
 }
 
-
 .eb-garamond {
   font-family: "EB Garamond", serif;
   font-optical-sizing: auto;
@@ -25,6 +24,7 @@
   font-style: normal;
   font-size: 60px;
 }
+
 .w-60 {width: 60%;}
 .w-100 {width: 100%;}
 .h-150 {height: 150px;}
@@ -40,6 +40,7 @@
 .ai-center {align-items: center;}
 
 .txta-center {text-align: center;}
+.txta-justify {text-align: justify;}
 
 .bgc-gray-f1 {background-color: var(--color-gris-fondo-2);}
 .bgc-gray-f2 {background-color: var(--color-gris-fondo-1);}
@@ -51,3 +52,10 @@
 .border {border: solid 2px var(--color-gris-estandar);}
 .border-bottom {border-bottom: solid 2px var(--color-gris-estandar);}
 
+.letra-capital::first-letter {initial-letter: 3 3; margin-right: 0.3em;}
+
+
+.fs-20 {font-size: 20px;}
+.fs-30 {font-size: 30px;}
+
+.ff-sans {font-family: sans-serif;}

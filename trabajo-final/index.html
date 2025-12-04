@@ -10,50 +10,30 @@
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
 </head>
 <body class="flex column jfc-center ai-center w-60 mtop-20 mbottom-40 bgc-white border">
-    <header class="w-100 txta-center bgc-gray-f2 border-bottom h-150"> 
-        <!-- <nav>
-            <ul>
-                <menu>menu1</menu>
-                <menu>menu2</menu>
-                <menu>menu3</menu>
-                <menu>menu4</menu>
-                <menu>menu5</menu>
-            </ul>
-        </nav> -->
+    <header class="w-100 txta-center bgc-gray-f2 h-150"> 
         <h1 class="eb-garamond">The Bible</h1>
     </header>
     <main class="w-60 txta-center"> 
-        <section id="request"> 
-            <form action="">
-                <input type="text">
+        <section id="request" class="mtop-20"> 
+            
+            <form id="formularioBusqueda">
+                <label for="busqueda" class="fs-20 ff-sans">Look up a Bible reference:</label>   
+                <input id="busqueda" type="text" placeholder="Jn3:16-21" class="fs-20">
+                <button type="submit" class="fs-20">🔍​</button>
             </form>
         </section>
         <hr>
-        <section id="response"> soy la sección response
+        <section id="response">
             <template id="cita-biblica"> 
-                <span>"</span>
-                <h4 data-id="referencia">Referencia</h4>
-                <p data-id="texto-cita">Texto Cita Bíblica</p> 
-                <span>"</span>  
+                <h4 data-id="referencia" class="fs-30">Referencia</h4>
+                <p data-id="texto-cita" class="letra-capital txta-justify fs-20">Texto Cita Bíblica</p>  
             </template>
             <div id="contenedor-cita"></div> 
-        </section>
-        <section id="libros-biblia">
-            <div>Libro 1</div>
-            <div>Libro 2</div>
-            <div>Libro 3</div>
-            <div>Libro 4</div>
-            <div>Libro 5</div>
-            <div>Libro 6</div>
-            <div>Libro 7</div>
-            <div>Libro 8</div>
-            <div>Libro 9</div>
-            <div>Libro 10</div>
-        </section>
+        </section>   
     </main>
     <footer class="w-100 txta-center bgc-gray-f2 color-white">
         <p>by Mauro Gonzalo Roth</p>
-        <p>Con datos suministrados por https://bible-api.com/</p>
+        <p>Con datos suministrados por <a href="https://bible-api.com/" class="color-white" target="_blank">bible-api.com/</a></p>
     </footer>
     <script src="script.js"></script>
 </body>
